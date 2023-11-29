@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식 분석</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <i class="fas fa-utensils icon"></i>
+        <h1>SnapFlavor</h1>
+        <p>음식 사진을 업로드하고 분석해보세요!</p>
+        
+        <form action="/" method="post" enctype="multipart/form-data" class="upload-form">
+            <div class="input-group">
+                <input type="file" class="custom-file-input" id="file" name="file" onchange="displaySelectedFile()">
+                <label class="custom-file-label" for="file">이미지 선택</label>
+                <button type="submit" class="btn btn-primary">분석 시작</button>
+            </div>
+        </form>
+
+        <div class="replacement-form">
+            <input type="text" class="form-control" id="replacement" placeholder="대체 재료 입력">
+            <button onclick="submitReplacement()" class="btn btn-secondary">재료 입력</button>
+        </div>
+
+        <div id="selectedFile" class="selected-file"></div>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
