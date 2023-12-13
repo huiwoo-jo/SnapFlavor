@@ -68,7 +68,7 @@ def upload_file():
                 model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "You are a helpful assistant."},
-                    {"role": "user", "content": f"{replacement}를 제외한 {food_name}의 재료와 레시피 단계를 단계별로 안내11:19 PM 12/11/2023"},
+                    {"role": "user", "content": f"{replacement}를 제외한 {food_name}의 재료와 레시피 단계를 단계별로 안내"},
                 ]
             )
 
